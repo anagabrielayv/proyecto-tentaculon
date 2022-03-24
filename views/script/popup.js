@@ -1,0 +1,25 @@
+var btnAbrirPopup = document.getElementById('btn-abrir-popup'),
+
+	overlay = document.getElementById('overlay'),
+	popup = document.getElementById('popup'),
+	btnCerrarPopup = document.getElementById('btn-cerrar-popup');
+
+	btnAbrirPopup.addEventListener('click', function(){
+		overlay.classList.add('active');
+		popup.classList.add('active');
+	});
+	
+	btnCerrarPopup.addEventListener('click', function(e){
+		e.preventDefault();
+		overlay.classList.remove('active');
+		popup.classList.remove('active');
+	});
+
+function btn_traemelo(){
+	document.getElementById("contenedor_inputs").style.display = 'block';	
+	document.getElementById("store_control").style.display = 'none';		
+}
+function btn_recojo(){
+	document.getElementById("contenedor_inputs").style.display = 'none';
+	document.getElementById("store_control").style.display = 'block';	
+}
